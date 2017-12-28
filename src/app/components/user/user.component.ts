@@ -21,6 +21,7 @@ export class UserComponent implements OnInit {
     console.log('ngOnInit ran');
 
     this.name = 'John Doe';
+    this.email = "test@yahoo.com"
     this.age = 30;
     this.address = {
       street: '50 Main st',
@@ -38,6 +39,13 @@ export class UserComponent implements OnInit {
     console.log('hobby');
     this.hobbies.unshift(hobby)
     return false
+  }
+  deleteHobby(hobby){
+    for(let i = 0; i < this.hobbies.length; i ++) {
+      if(this.hobbies[i] == hobby) {
+        this.hobbies.splice(i, 1);
+      }
+    }
   }
 
 }
