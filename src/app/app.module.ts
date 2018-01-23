@@ -22,7 +22,7 @@ const appRoutes: Routes = [
     AboutComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes)
